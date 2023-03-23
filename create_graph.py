@@ -19,6 +19,7 @@ def generate_graph(num_vertices, edge_density):
 
 graph = generate_graph(num_vertices, edge_density)
 
+# Do pliku lista_sasiedztwa.txt zapisz ilosc wierzcholkow i polaczenie krawedzi
 with open('lista_sasiedztwa.txt', 'w') as f:
     f.write(f"{num_vertices}")
     for edge in graph:
