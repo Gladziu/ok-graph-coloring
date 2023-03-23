@@ -1,6 +1,7 @@
 # Wczytaj plik z listą sąsiedztwa
 with open('lista_sasiedztwa.txt', 'r') as file:
     lines = file.readlines()
+
 num_of_vertex = int(lines[0])
 
 # Zdefiniuj graf jako słownik list sąsiedztwa
@@ -20,32 +21,29 @@ colors = {}
 for vertex in graph:
     colors[vertex] = None
 
-# Utwórz zbiór wszystkich użytych kolorów
-used_colors = set()
-
 # Iteruj przez pozostałe wierzchołki i przypisz każdemu kolor, który nie jest używany przez jego sąsiadów
 for vertex in graph.keys():
 
     # Utwórz zbiór kolorów używanych przez sąsiadów
-    local_used_colors = set()
+    used_colors = set()
     for neighbour in graph[vertex]:
         if colors[neighbour] is not None:
-            local_used_colors.add(colors[neighbour])
-
-    # Dodaj kolor do zbioru użytych kolorów
-    used_colors.update(local_used_colors)
+            used_colors.add(colors[neighbour])
 
     # Przypisz pierwszy nieużywany kolor
     for color in range(1, num_of_vertex+1):
-        if color not in local_used_colors:
+        if color not in used_colors:
             colors[vertex] = color
             break
 
-# Policz ile kolorow zostało użytych
-all_colors = len(used_colors)
+# Wydrukuj wyniki
 
-# Wydrukuj wynik
-print('used colors', all_colors)
+# Policz ile kolorow zostało użytych
+temp = []
+for key, value in sorted(colors.items()):
+    if value not in temp:
+        temp.append(value)
+print('used colors', len(temp))
 
 for key, value in sorted(colors.items()):
     print(key, ':', value)
