@@ -37,7 +37,6 @@ for vertex in graph.keys():
             break
 
 # Wydrukuj wyniki
-
 # Policz ile kolorow zostało użytych
 temp = []
 for key, value in sorted(colors.items()):
@@ -45,5 +44,6 @@ for key, value in sorted(colors.items()):
         temp.append(value)
 print('used colors', len(temp))
 
+# Spis koloru każdej krawedzi
 for key, value in sorted(colors.items()):
     print(key, ':', value)
