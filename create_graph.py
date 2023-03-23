@@ -1,5 +1,6 @@
 import random
 
+# Ustaw liczbe wierzcholkow i nasycenie krawedzi
 num_vertices = 10
 edge_density = 0.55
 
@@ -12,9 +13,8 @@ def generate_graph(num_vertices, edge_density):
             random_number = random.random()     # Random number between 0.0 - 1.0
             if random_number < edge_density:
                 adjacency_list.append((i + 1, j + 1))
-
+                
     return sorted(adjacency_list)
-
 
 graph = generate_graph(num_vertices, edge_density)
 
