@@ -47,5 +47,3 @@ print('used colors', len(temp))
 
 for key, value in sorted(colors.items()):
     print(key, ':', value)
-
-    
