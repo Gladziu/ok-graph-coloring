@@ -8,6 +8,7 @@ def generate_graph(num_vertices, edge_density):
 
     adjacency_list = []
 
+    # Dodaj polaczenie wierzcholkow uwzgledniajac nasycenie krawedzi
     for i in range(num_vertices):
         for j in range(i + 1, num_vertices):
             random_number = random.random()     # Random number between 0.0 - 1.0
