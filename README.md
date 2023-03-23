@@ -1,4 +1,4 @@
-# Graph coloring
+# Optymalizacja Kombinatoryczna - Graph Coloring
 
 create_graph.py generuje graf reprezentowany przy pomocy listy krawędzi do pliku lista_sasiedztwa.txt,
 przy generowaniu grafu można modyfikować ilość wierzchołków oraz nasycenie krawędzi
