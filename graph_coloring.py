@@ -25,13 +25,13 @@ for vertex in graph:
 # Iteruj przez pozostałe wierzchołki i przypisz każdemu kolor, który nie jest używany przez jego sąsiadów
 for vertex in graph.keys():
 
-    # Utwórz zbiór kolorów używanych przez sąsiadów
+    # Utwórz zbiór kolorów zajetych / używanych przez sąsiadów
     used_colors = []
     for neighbour in graph[vertex]:
         if colors[neighbour] is not None:
             used_colors.append(colors[neighbour])
 
-    # Przypisz pierwszy nieużywany kolor
+    # Przypisz pierwszy wolny kolor
     for color in range(1, num_of_vertex+1):
         if color not in used_colors:
             colors[vertex] = color
