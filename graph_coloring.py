@@ -26,10 +26,10 @@ for vertex in graph:
 for vertex in graph.keys():
 
     # Utwórz zbiór kolorów używanych przez sąsiadów
-    used_colors = set()
+    used_colors = []
     for neighbour in graph[vertex]:
         if colors[neighbour] is not None:
-            used_colors.add(colors[neighbour])
+            used_colors.append(colors[neighbour])
 
     # Przypisz pierwszy nieużywany kolor
     for color in range(1, num_of_vertex+1):
