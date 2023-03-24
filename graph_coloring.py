@@ -21,6 +21,7 @@ colors = {}
 for vertex in graph:
     colors[vertex] = None
 
+# Greedy algorithm
 # Iteruj przez pozostałe wierzchołki i przypisz każdemu kolor, który nie jest używany przez jego sąsiadów
 for vertex in graph.keys():
 
