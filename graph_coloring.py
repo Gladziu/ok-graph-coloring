@@ -18,12 +18,12 @@ for line in lines[1:]:
 
 # Zdefiniuj słownik kolorów, w którym każdy wierzchołek ma początkowo przypisany kolor 'None'
 colors = {}
-for vertex in graph:
+for vertex in sorted(graph):
     colors[vertex] = None
 
 # Greedy algorithm
 # Iteruj przez pozostałe wierzchołki i przypisz każdemu kolor, który nie jest używany przez jego sąsiadów
-for vertex in graph.keys():
+for vertex in sorted(graph.keys()):
 
     # Utwórz zbiór kolorów zajetych / używanych przez sąsiadów
     used_colors = []
