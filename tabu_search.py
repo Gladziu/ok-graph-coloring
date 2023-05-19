@@ -100,9 +100,6 @@ def color_graph(graph, iteration, max_tabu_length):
             if best_solution is None or len(set(colors.values())) < best_solution:
                 best_solution = len(set(colors.values()))
                 best_coloring = deepcopy(colors)
-
-
-
         iterations += 1
 
     return best_coloring
