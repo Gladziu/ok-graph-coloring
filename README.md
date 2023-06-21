@@ -1,9 +1,17 @@
-# Optymalizacja Kombinatoryczna - Graph Coloring
+# Graph Coloring - Optymalizacja Kombinatoryczna
 
-Program do kolorowania wierzcholkow w grafie.
+## Program do kolorowania wierzcholkow w grafie. 
+Korzystająć z dwóch różnych algorytmów uzyskujemy w wyniku ilość użytych kolorów do pokolorowania grafu.
 
-create_graph.py generuje graf reprezentowany przy pomocy listy krawędzi do pliku lista_sasiedztwa.txt,
+## Generowanie grafu
+create_graph.py - generuje graf reprezentowany przy pomocy listy krawędzi do pliku lista_sasiedztwa.txt,
 przy generowaniu grafu można modyfikować ilość wierzchołków oraz nasycenie krawędzi
 
-graph_coloring.py koloruje graf z pliku lista_sasiedztwa.txt używając algorytmu zachłannego
-output programu: ilość kolorów użytych do pokolorowania i jaki kolor ma każdy wierzchołek
+
+## Greedy algorithm
+graph_coloring.py - koloruje graf z pliku lista_sasiedztwa.txt używając algorytmu zachłannego
+
+
+## Tabu search metaheuristic
+tabu_search.py - koloruje graf przy pomocy metaheurystki tabu search, 
+możliwe jest dostosowanie długości tabu listy i liczby iteracji
